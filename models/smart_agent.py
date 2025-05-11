@@ -9,8 +9,6 @@ class BuyFirstSellLastAgent(Agent):
     def act(self):
         # Estrategia: comprar todo lo que pueda al principio y 
         # vender lo más tarde posible, porque el precio siempre sube
-        rondas=self.market.get_pending_iterations_n()
-        print(rondas, self.gpus)
         if self.market.get_pending_iterations_n() == self.gpus:
             self.sell()
             return
